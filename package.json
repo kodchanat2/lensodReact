@@ -11,7 +11,8 @@
 		"react-native": "0.49.0",
 		"react-native-collapsing-toolbar": "^1.0.0-beta.7",
 		"react-native-nested-scroll-view": "^5.0.2",
-		"react-native-router-flux": "^4.0.0-beta.24"
+		"react-native-router-flux": "^4.0.0-beta.24",
+		"react-native-vector-icons": "^4.4.2"
 	},
 	"devDependencies": {
 		"babel-jest": "21.2.0",
