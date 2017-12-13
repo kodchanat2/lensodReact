@@ -1,12 +1,19 @@
 import React from 'react';
 import { StyleSheet, View} from 'react-native';
+import { Router, Scene } from 'react-native-router-flux';
 
 import Landing from './components/landing';
 
 export default class App extends React.Component {
   render() {
     return (
-      <Landing/>
+      <View style={styles.container}>
+      <Router sceneStyle={styles.scenes}>
+          <Scene key="root">
+              <Scene key="landing" component={Landing} initial="true" title="LENSOD" />
+          </Scene>
+      </Router>
+    </View>
     );
   }
 }
