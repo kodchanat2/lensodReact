@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StatusBar, Text, View } from 'react-native';
+import { Platform, StatusBar, Text, View, Image, StyleSheet } from 'react-native';
 import CollapsibleToolbar from 'react-native-collapsible-toolbar';
 
 export default class Landing extends Component {
@@ -40,27 +40,77 @@ export default class Landing extends Component {
     renderNavBar = () => (
         <View
             style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
+                justifyContent: 'flex-end',
                 alignItems: 'center',
                 flex: 1
             }}
         >
-            <Text style={{ textAlign: 'center', color: '#FFF' }}>Title</Text>
+            <View
+                style={{
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    flex: 1
+                }}
+            >
+                <Image 
+                    source={require('../assets/img/logo.png')} 
+                    style={{width:25, marginRight:10}} 
+                    resizeMode="contain"
+                />   
+                <Image 
+                    source={require('../assets/img/text.png')} 
+                    style={{width:100}} 
+                    resizeMode="contain"
+                />    
+            </View>
         </View>
     );
+
+    renderToolBar = () => (
+        <View style={styles.container}>
+            <Image 
+                source={require('../assets/img/full_logo.png')} 
+                style={styles.img} 
+                resizeMode="contain"
+            />                 
+            <Text style={{ textAlign: 'center', color: '#FFF', fontSize:30, fontFamily:'cloud', fontWeight:'bold' }}>มิติใหม่ ในการจองดนตรีสด</Text>
+            <Text style={{ textAlign: 'center', color: '#FFF', fontSize:22, fontFamily:'cloud' }}>ศิลปินคุณภาพ ง่ายสะดวกรวดเร็ว ไม่มีค่าบริการ!</Text>
+            
+        </View>
+    )
 
     render() {
         return (
             <CollapsibleToolbar
                 renderContent={this.renderContent}
                 renderNavBar={this.renderNavBar}
-                imageSource='https://lorempixel.com/400/300/'
-                collapsedNavBarBackgroundColor='#009688'
+                imageSource='../assets/img/logo.png'
+                renderToolBar={this.renderToolBar}
+                collapsedNavBarBackgroundColor="#291753"
                 translucentStatusBar
                 showsVerticalScrollIndicator={false}
-                // toolBarHeight={300}
+                toolBarHeight={500}
             />
         );
     }
 }
+
+
+const styles = StyleSheet.create({
+    container: {
+        flex:1,
+        backgroundColor: "#291753",
+        height:500,
+        justifyContent: 'center',
+    },
+    img:{
+        // width: 200,
+        height:200,
+        alignSelf: 'center',
+        // borderRadius: 50,
+        // borderWidth: 2,
+        borderColor: '#eee',
+        margin: 30
+    },
+})
