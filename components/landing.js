@@ -1,12 +1,9 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
-import { Platform, StatusBar, Text, View, Image, StyleSheet } from 'react-native';
+import { Platform, StatusBar, Text, View, Image } from 'react-native';
 import CollapsibleToolbar from 'react-native-collapsible-toolbar';
+
+import Toolbar from './landing_toolbar';
+import Navbar from './landing_navbar';
 
 export default class Landing extends Component {
     componentWillMount() {
@@ -38,46 +35,11 @@ export default class Landing extends Component {
     );
 
     renderNavBar = () => (
-        <View
-            style={{
-                justifyContent: 'flex-end',
-                alignItems: 'center',
-                flex: 1
-            }}
-        >
-            <View
-                style={{
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    flex: 1
-                }}
-            >
-                <Image 
-                    source={require('../assets/img/logo.png')} 
-                    style={{width:25, marginRight:10}} 
-                    resizeMode="contain"
-                />   
-                <Image 
-                    source={require('../assets/img/text.png')} 
-                    style={{width:100}} 
-                    resizeMode="contain"
-                />    
-            </View>
-        </View>
+        <Navbar/>
     );
 
     renderToolBar = () => (
-        <View style={styles.container}>
-            <Image 
-                source={require('../assets/img/full_logo.png')} 
-                style={styles.img} 
-                resizeMode="contain"
-            />                 
-            <Text style={{ textAlign: 'center', color: '#FFF', fontSize:30, fontFamily:'cloud', fontWeight:'bold' }}>มิติใหม่ ในการจองดนตรีสด</Text>
-            <Text style={{ textAlign: 'center', color: '#FFF', fontSize:22, fontFamily:'cloud' }}>ศิลปินคุณภาพ ง่ายสะดวกรวดเร็ว ไม่มีค่าบริการ!</Text>
-            
-        </View>
+        <Toolbar/>
     )
 
     render() {
@@ -95,22 +57,3 @@ export default class Landing extends Component {
         );
     }
 }
-
-
-const styles = StyleSheet.create({
-    container: {
-        flex:1,
-        backgroundColor: "#291753",
-        height:500,
-        justifyContent: 'center',
-    },
-    img:{
-        // width: 200,
-        height:200,
-        alignSelf: 'center',
-        // borderRadius: 50,
-        // borderWidth: 2,
-        borderColor: '#eee',
-        margin: 30
-    },
-})
