@@ -1,36 +1,66 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
+
 import React, { Component } from 'react';
-import { StyleSheet, Text, View} from 'react-native';
+import { Platform, StatusBar, Text, View } from 'react-native';
+import CollapsibleToolbar from 'react-native-collapsible-toolbar';
 
-export default class Landing extends Component<{}> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          This is Landing Page
-        </Text>
-      </View>
+export default class Landing extends Component {
+    componentWillMount() {
+        StatusBar.setBarStyle('light-content');
+
+        if (Platform.OS === 'android') {
+            StatusBar.setTranslucent(true);
+            StatusBar.setBackgroundColor('rgba(0, 0, 0, 0.2)', true);
+        }
+    }
+
+    renderContent = () => (
+        <View>
+            {new Array(20).fill().map((_, i) => (
+                <View
+                    // eslint-disable-next-line
+                    key={i}
+                    style={{
+                        backgroundColor: '#F5F5F5',
+                        padding: 10,
+                        borderBottomWidth: 1,
+                        borderBottomColor: '#E5E5E5'
+                    }}
+                >
+                    <Text>{`Item ${i + 1}`}</Text>
+                </View>
+            ))}
+        </View>
     );
-  }
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FFFFFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+    renderNavBar = () => (
+        <View
+            style={{
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flex: 1
+            }}
+        >
+            <Text style={{ textAlign: 'center', color: '#FFF' }}>Title</Text>
+        </View>
+    );
+
+    render() {
+        return (
+            <CollapsibleToolbar
+                renderContent={this.renderContent}
+                renderNavBar={this.renderNavBar}
+                imageSource='https://lorempixel.com/400/300/'
+                collapsedNavBarBackgroundColor='#009688'
+                translucentStatusBar
+                showsVerticalScrollIndicator={false}
+                // toolBarHeight={300}
+            />
+        );
+    }
+}

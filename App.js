@@ -10,7 +10,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
       <Router sceneStyle={styles.scenes}>
           <Scene key="root">
-              <Scene key="landing" component={Landing} initial="true" title="LENSOD" />
+              <Scene key="landing" component={Landing} initial="true" hideNavBar="true" title="LENSOD" />
           </Scene>
       </Router>
     </View>
