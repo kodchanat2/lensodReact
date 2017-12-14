@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Platform, StatusBar, Text, View, Image, TouchableOpacity } from 'react-native';
 import CollapsibleToolbar from 'react-native-collapsible-toolbar';
 
-import Toolbar from './landing_toolbar';
+import Logo from './landing_logo';
 import Navbar from './landing_navbar';
 import EventGrid from './landing_grid';
 
@@ -42,7 +42,7 @@ export default class Landing extends Component {
     );
 
     renderToolBar = () => (
-        <Toolbar/>
+        <Logo/>
     )
 
     render() {
