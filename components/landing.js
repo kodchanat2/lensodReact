@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Platform, StatusBar, Text, View, Image } from 'react-native';
+import { Platform, StatusBar, Text, View, Image, TouchableOpacity } from 'react-native';
 import CollapsibleToolbar from 'react-native-collapsible-toolbar';
 
 import Toolbar from './landing_toolbar';
 import Navbar from './landing_navbar';
+import EventGrid from './landing_grid';
 
 export default class Landing extends Component {
     componentWillMount() {
@@ -15,8 +16,10 @@ export default class Landing extends Component {
         }
     }
 
+    
     renderContent = () => (
-        <View>
+        <View style={{ backgroundColor:"#291753"}}>
+            <EventGrid/>
             {new Array(20).fill().map((_, i) => (
                 <View
                     // eslint-disable-next-line
@@ -44,16 +47,18 @@ export default class Landing extends Component {
 
     render() {
         return (
-            <CollapsibleToolbar
-                renderContent={this.renderContent}
-                renderNavBar={this.renderNavBar}
-                imageSource='../assets/img/logo.png'
-                renderToolBar={this.renderToolBar}
-                collapsedNavBarBackgroundColor="#291753"
-                translucentStatusBar
-                showsVerticalScrollIndicator={false}
-                toolBarHeight={500}
-            />
+            <View style={{ backgroundColor:"#291753", flex:1}}>
+                <CollapsibleToolbar
+                    renderContent={this.renderContent}
+                    renderNavBar={this.renderNavBar}
+                    imageSource='../assets/img/logo.png'
+                    renderToolBar={this.renderToolBar}
+                    collapsedNavBarBackgroundColor="#291753"
+                    translucentStatusBar
+                    showsVerticalScrollIndicator={false}
+                    toolBarHeight={450}
+                />
+            </View>
         );
     }
 }
