@@ -1,40 +1,48 @@
 import React, { Component } from 'react';
-import {  Platform, StatusBar, View, Image, StyleSheet, FlatList, Text } from 'react-native';
+import {  View, Image, StyleSheet, FlatList, Text } from 'react-native';
 import CollapsibleToolbar from 'react-native-collapsible-toolbar';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { Actions } from 'react-native-router-flux';
+
+import NavBackButton from './navbar_back';
+import Card from './card';
+import {list} from '../config';
 
 export default class Listcard extends Component {
 
     constructor(props){
         super(props)
     }
-
     content = (props) => (
-        <View style={styles.card}
-            key = {props.item}
-        >
-            <Text>{`zasdasdasd ${props.item}`}</Text>
-        </View>
+        <Card {...props.item}/>
     )
     
     renderContent = () => (
         <View style={styles.container}>
         <FlatList
-            data={['a','b','c']}
+            data={list}
             renderItem={this.content}
+            style={{marginBottom:20}}
         />
     </View>
     );
 
+    onPress = () => {
+        console.log('POP ');
+        // Actions.pop();
+    }
+
     renderNavBar = () => (
         <View style={styles.containerLogo}>
+            <NavBackButton onPress={this.onPress}/>
             <View style={styles.logo}>
-                <Text>{this.props.title}</Text>  
+                <Text style={styles.textLogo}>{this.props.title}</Text>  
             </View>
         </View>
     );
 
     renderToolBar = () => (
-        <View style={[styles.containerLogo,{backgroundColor:"#291753", height:80}]}>
+        <View style={[styles.containerLogo,{backgroundColor:"#291753", height:80, marginBottom:10}]}>
             <View style={styles.logo}>
                 <Text style={styles.textLogo}>{this.props.title}</Text>  
             </View>
@@ -64,17 +72,9 @@ const styles = StyleSheet.create({
         // alignItems: 'center',
         flex: 1
     },
-    card: {
-        flex: 1,
-        height: 500,
-        // flexDirection: 'row',
-        borderWidth:2,borderColor:'purple',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
 
     containerLogo: {
-        justifyContent: 'flex-end',
+        flexDirection: 'row',
         alignItems: 'center',
         flex: 1
     },
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     textLogo: {
-        fontSize: 30,
+        fontSize: 22,
         color: "white"
     },
 })

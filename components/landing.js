@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StatusBar, Text, View, Image, TouchableOpacity } from 'react-native';
+import { Platform, StatusBar, Text, View, FlatList } from 'react-native';
 import CollapsibleToolbar from 'react-native-collapsible-toolbar';
 
 import Logo from './landing_logo';
@@ -16,9 +16,8 @@ export default class Landing extends Component {
         }
     }
 
-    
     renderContent = () => (
-        <View style={{ backgroundColor:"#291753"}}>
+        <View>
             <EventGrid/>
             {new Array(20).fill().map((_, i) => (
                 <View
@@ -51,7 +50,7 @@ export default class Landing extends Component {
                 <CollapsibleToolbar
                     renderContent={this.renderContent}
                     renderNavBar={this.renderNavBar}
-                    imageSource='../assets/img/logo.png'
+                    // imageSource='../assets/img/logo.png'
                     renderToolBar={this.renderToolBar}
                     collapsedNavBarBackgroundColor="#291753"
                     translucentStatusBar

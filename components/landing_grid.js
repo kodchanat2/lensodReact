@@ -3,13 +3,9 @@ import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Grid from 'react-native-grid-component';
 import { Actions } from 'react-native-router-flux';
 
-const imgURL = 'https://www.lensod.com/assets/img/landing/';
-const eventData = [
-        { title: 'งานแต่ง', name: 'event-wedding'},
-        { title: 'ปาร์ตี้', name: 'event-party'},
-        { title: 'เลี้ยงสังสรรค์', name: 'event-ceremony'},
-        { title: 'ดูทั้งหมด', name: 'event-andmore', link: 'Listcard'}
-    ]
+
+import {eventData, imgURL} from '../config';
+
 export default class EventGrid extends Component {
 
     onPress = (data) => {
