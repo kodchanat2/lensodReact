@@ -36,13 +36,12 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: '#FFF',
         fontSize:30,
-        fontFamily:'cloud',
-        fontWeight:'bold'
+        fontFamily:'cloud-semibold-webfont',
     },
     text:{
         textAlign: 'center',
         color: '#FFF',
         fontSize:22,
-        fontFamily:'cloud',
+        fontFamily:'cloud-regular-webfont',
     }
 })

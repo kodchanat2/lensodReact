@@ -58,6 +58,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: '#FFF',
         fontSize:30,
-        fontFamily:'cloud'
+        fontFamily:'cloud-semibold-webfont'
     }
 })

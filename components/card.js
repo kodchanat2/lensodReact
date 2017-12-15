@@ -24,7 +24,7 @@ export default class Card extends Component {
             <View style={{flex:1, flexDirection: 'row', alignItems: 'flex-end',}}>
                 <View style={styles.box}>
                     <Text style={styles.bigText}>{this.props.title}</Text>
-                    <Text style={styles.text}>{this.props.description}</Text>
+                    <Text style={styles.text} numberOfLines ={3}>{this.props.description}</Text>
                 </View>
             </View>
             <View style={styles.rightBox}>
@@ -72,18 +72,18 @@ const styles = StyleSheet.create({
         // textAlign: 'center',
         color: 'black',
         fontSize:28,
-        fontFamily:'cloud'
+        fontFamily:'cloud-regular-webfont'
     },
     text:{
         // textAlign: 'center',
         color: '#222',
         fontSize:14,
-        fontFamily:'cloud'
+        fontFamily:'cloud-light-webfont',
     },
     genreText:{
         color: '#555',
         fontSize:12,
-        fontFamily:'cloud',
+        fontFamily:'cloud-semibold-webfont',
         borderRadius: 10,
         paddingLeft: 7,
         paddingRight: 7,

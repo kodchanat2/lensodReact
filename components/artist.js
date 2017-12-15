@@ -105,6 +105,6 @@ const styles = StyleSheet.create({
     textLogo: {
         fontSize: 22,
         color: "white",
-        fontWeight: "bold"
+        fontFamily:'cloud-semibold-webfont',
     },
 })

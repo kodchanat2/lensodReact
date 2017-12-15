@@ -52,20 +52,20 @@ const styles = StyleSheet.create({
         // borderWidth:2,borderColor:'purple'
     },
     name:{
-        fontWeight: 'bold',
+        fontFamily:'cloud-regular-webfont',
         fontSize: 25,
         color: 'black',
         margin:3,
         marginLeft:5
     },
     description:{
-        fontStyle: 'italic',
+        fontFamily:'cloud-light-webfont',
         fontSize: 14
     },
     genreText:{
         color: '#333',
         fontSize:15,
-        fontFamily:'cloud',
+        fontFamily:'cloud-semibold-webfont',
         borderRadius: 10,
         paddingLeft: 7,
         paddingRight: 7,
