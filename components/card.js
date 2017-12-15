@@ -9,25 +9,25 @@ export default class Card extends Component {
         super(props)
     }
 
-    onPress = () => {
-        console.log('asdasd ');
+    onPress = (props) => {
+        console.log('asdasd ',props);
     }
 
     render = () => (
-        <TouchableOpacity onPress={() => this.onPress(data)} style={styles.container}>
+        <TouchableOpacity onPress={() => this.onPress(this.props)} style={styles.container}>
             <Image 
                 style={styles.img} 
-                source={{uri: this.props.item.pic}} 
+                source={{uri: this.props.pic}} 
                 resizeMode="cover"/>
 
             <View style={{flex:1, flexDirection: 'row', alignItems: 'flex-end',}}>
                 <View style={styles.box}>
-                    <Text style={styles.bigText}>{this.props.item.title}</Text>
-                    <Text style={styles.text}>{this.props.item.description}</Text>
+                    <Text style={styles.bigText}>{this.props.title}</Text>
+                    <Text style={styles.text}>{this.props.description}</Text>
                 </View>
             </View>
             <View style={styles.rightBox}>
-                { this.props.item.genres.map((item) => (
+                { this.props.genres.map((item) => (
                     <Text style={styles.genreText}>{item}</Text>
                 ))}
             </View>

@@ -5,6 +5,8 @@ import CollapsibleToolbar from 'react-native-collapsible-toolbar';
 import Logo from './landing_logo';
 import Navbar from './landing_navbar';
 import EventGrid from './landing_grid';
+import Card from './card';
+import {list} from '../config';
 
 export default class Landing extends Component {
     componentWillMount() {
@@ -16,23 +18,21 @@ export default class Landing extends Component {
         }
     }
 
+    content = (props) => (
+        <Card {...props.item}  key={this.props.key}/>
+    )
+    
     renderContent = () => (
         <View>
             <EventGrid/>
-            {new Array(20).fill().map((_, i) => (
-                <View
-                    // eslint-disable-next-line
-                    key={i}
-                    style={{
-                        backgroundColor: '#F5F5F5',
-                        padding: 10,
-                        borderBottomWidth: 1,
-                        borderBottomColor: '#E5E5E5'
-                    }}
-                >
-                    <Text>{`Item ${i + 1}`}</Text>
-                </View>
-            ))}
+            
+            <View style={{flex:1}}>
+                <FlatList
+                    data={list}
+                    renderItem={this.content}
+                    style={{marginBottom:20}}
+                />
+            </View>
         </View>
     );
 
