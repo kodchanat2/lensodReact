@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Grid from 'react-native-grid-component';
 import { Actions } from 'react-native-router-flux';
-
+import FastImage from 'react-native-fast-image'
 
 import {eventData, imgURL} from '../config';
 
@@ -15,10 +15,13 @@ export default class EventGrid extends Component {
 
     _renderItem = (data, i) => (
         <TouchableOpacity onPress={() => this.onPress(data)} style={styles.item} key={i}>
-            <Image 
+            <FastImage 
                 style={styles.img} 
-                source={{uri: imgURL+data.name+'.jpg'}} 
-                resizeMode="cover"/>
+                source={{
+                    uri: imgURL+data.name+'.jpg',
+                    priority: FastImage.priority.low,
+                }} 
+                resizeMode={FastImage.resizeMode.cover}/>
                 <Text style={styles.text}>{data.title}</Text>
         </TouchableOpacity>
     )

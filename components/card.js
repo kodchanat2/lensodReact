@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Grid from 'react-native-grid-component';
 import { Actions } from 'react-native-router-flux';
+import FastImage from 'react-native-fast-image'
+
 
 export default class Card extends Component {
 
@@ -16,10 +18,13 @@ export default class Card extends Component {
 
     render = () => (
         <TouchableOpacity onPress={() => this.onPress(this.props)} style={styles.container}>
-            <Image 
+            <FastImage 
                 style={styles.img} 
-                source={{uri: this.props.pic}} 
-                resizeMode="cover"/>
+                source={{
+                    uri: this.props.pic,
+                    priority: FastImage.priority.low,
+                }} 
+                resizeMode={FastImage.resizeMode.cover}/>
 
             <View style={{flex:1, flexDirection: 'row', alignItems: 'flex-end',}}>
                 <View style={styles.box}>
