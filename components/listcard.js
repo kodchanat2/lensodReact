@@ -14,7 +14,7 @@ export default class Listcard extends Component {
         super(props)
     }
     content = (props) => (
-        <Card {...props.item}/>
+        <Card {...props}  key={this.props.key}/>
     )
     
     renderContent = () => (

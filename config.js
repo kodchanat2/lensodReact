@@ -59,9 +59,9 @@ export const list = [
 ]
 
 export const eventData = [
-    { title: 'งานแต่ง', name: 'event-wedding'},
-    { title: 'ปาร์ตี้', name: 'event-party'},
-    { title: 'เลี้ยงสังสรรค์', name: 'event-ceremony'},
+    { title: 'งานแต่ง', name: 'event-wedding', link: 'Listcard'},
+    { title: 'ปาร์ตี้', name: 'event-party', link: 'Listcard'},
+    { title: 'เลี้ยงสังสรรค์', name: 'event-ceremony', link: 'Listcard'},
     { title: 'ศิลปินทั้งหมด', name: 'event-andmore', link: 'Listcard'}
 ]
 
