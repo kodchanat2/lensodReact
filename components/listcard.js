@@ -34,7 +34,7 @@ export default class Listcard extends Component {
 
     renderNavBar = () => (
         <View style={styles.containerLogo}>
-            <NavBackButton onPress={this.onPress}/>
+            {/* <NavBackButton onPress={this.onPress}/> */}
             <View style={styles.logo}>
                 <Text style={styles.textLogo}>{this.props.title}</Text>  
             </View>
@@ -86,6 +86,7 @@ const styles = StyleSheet.create({
     },
     textLogo: {
         fontSize: 22,
-        color: "white"
+        color: "white",
+        fontWeight: "bold"
     },
 })
