@@ -25,12 +25,12 @@ export default class Landing extends Component {
     renderContent = () => (
         <View>
             <EventGrid/>
-            
+
             <View style={{flex:1}}>
                 <FlatList
                     data={list}
                     renderItem={this.content}
-                    style={{marginBottom:20}}
+                    style={{marginBottom:20, paddingTop:20, backgroundColor:"white",}}
                 />
             </View>
         </View>
