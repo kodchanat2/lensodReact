@@ -64,6 +64,15 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>cloud-light-webfont.ttf</string>
+		<string>cloud-light-webfont.woff</string>
+		<string>cloud-light-webfont.woff2</string>
+		<string>cloud-regular-webfont.ttf</string>
+		<string>cloud-regular-webfont.woff</string>
+		<string>cloud-regular-webfont.woff2</string>
+		<string>cloud-semibold-webfont.ttf</string>
+		<string>cloud-semibold-webfont.woff</string>
+		<string>cloud-semibold-webfont.woff2</string>
 	</array>
 </dict>
 </plist>

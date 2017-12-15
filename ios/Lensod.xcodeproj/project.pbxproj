@@ -48,6 +48,15 @@
 		6F545D329ECA4AF1AE371A63 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 390BF608395841F2B48CFA4C /* Octicons.ttf */; };
 		12040517AAD948678EC5F6D4 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6D81FE353E846DC94575AB9 /* SimpleLineIcons.ttf */; };
 		D02C579B2F09441E96AEE66C /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B90A4BC96C8241D185C356AB /* Zocial.ttf */; };
+		603B191F85AA4667A6802035 /* cloud-light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4C2461CEF7C4293B9313B45 /* cloud-light-webfont.ttf */; };
+		96BF99C6EF9E45B08659E726 /* cloud-light-webfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = D2FEC33F0A71488EA4DF45D2 /* cloud-light-webfont.woff */; };
+		486B30A9660F46C981B2EFB5 /* cloud-light-webfont.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 40913D078314445380FC1C4E /* cloud-light-webfont.woff2 */; };
+		9060D8478F0A46F4B7D19C90 /* cloud-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F3857A23B1440879065444B /* cloud-regular-webfont.ttf */; };
+		DA74380C107347AE9B197E8B /* cloud-regular-webfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = 12251F20401F4EF0A65E9AE2 /* cloud-regular-webfont.woff */; };
+		7C871BE412174647B87DAB9E /* cloud-regular-webfont.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 2A8A906CB01F46A597DC1FB9 /* cloud-regular-webfont.woff2 */; };
+		02D3FDED864B4AF0AAC2B801 /* cloud-semibold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB890BCE76A549B9904F16DD /* cloud-semibold-webfont.ttf */; };
+		4CE11ECE6D684531B58C4D93 /* cloud-semibold-webfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = 9203E61147E2480583D93379 /* cloud-semibold-webfont.woff */; };
+		E8C6133C7A73479791C80A4E /* cloud-semibold-webfont.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 91C6A2A31AF04392B50C2A93 /* cloud-semibold-webfont.woff2 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -288,6 +297,15 @@
 		390BF608395841F2B48CFA4C /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A6D81FE353E846DC94575AB9 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		B90A4BC96C8241D185C356AB /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C4C2461CEF7C4293B9313B45 /* cloud-light-webfont.ttf */ = {isa = PBXFileReference; name = "cloud-light-webfont.ttf"; path = "../assets/fonts/cloud-light-webfont.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D2FEC33F0A71488EA4DF45D2 /* cloud-light-webfont.woff */ = {isa = PBXFileReference; name = "cloud-light-webfont.woff"; path = "../assets/fonts/cloud-light-webfont.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		40913D078314445380FC1C4E /* cloud-light-webfont.woff2 */ = {isa = PBXFileReference; name = "cloud-light-webfont.woff2"; path = "../assets/fonts/cloud-light-webfont.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6F3857A23B1440879065444B /* cloud-regular-webfont.ttf */ = {isa = PBXFileReference; name = "cloud-regular-webfont.ttf"; path = "../assets/fonts/cloud-regular-webfont.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		12251F20401F4EF0A65E9AE2 /* cloud-regular-webfont.woff */ = {isa = PBXFileReference; name = "cloud-regular-webfont.woff"; path = "../assets/fonts/cloud-regular-webfont.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2A8A906CB01F46A597DC1FB9 /* cloud-regular-webfont.woff2 */ = {isa = PBXFileReference; name = "cloud-regular-webfont.woff2"; path = "../assets/fonts/cloud-regular-webfont.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AB890BCE76A549B9904F16DD /* cloud-semibold-webfont.ttf */ = {isa = PBXFileReference; name = "cloud-semibold-webfont.ttf"; path = "../assets/fonts/cloud-semibold-webfont.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9203E61147E2480583D93379 /* cloud-semibold-webfont.woff */ = {isa = PBXFileReference; name = "cloud-semibold-webfont.woff"; path = "../assets/fonts/cloud-semibold-webfont.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		91C6A2A31AF04392B50C2A93 /* cloud-semibold-webfont.woff2 */ = {isa = PBXFileReference; name = "cloud-semibold-webfont.woff2"; path = "../assets/fonts/cloud-semibold-webfont.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -546,6 +564,15 @@
 				390BF608395841F2B48CFA4C /* Octicons.ttf */,
 				A6D81FE353E846DC94575AB9 /* SimpleLineIcons.ttf */,
 				B90A4BC96C8241D185C356AB /* Zocial.ttf */,
+				C4C2461CEF7C4293B9313B45 /* cloud-light-webfont.ttf */,
+				D2FEC33F0A71488EA4DF45D2 /* cloud-light-webfont.woff */,
+				40913D078314445380FC1C4E /* cloud-light-webfont.woff2 */,
+				6F3857A23B1440879065444B /* cloud-regular-webfont.ttf */,
+				12251F20401F4EF0A65E9AE2 /* cloud-regular-webfont.woff */,
+				2A8A906CB01F46A597DC1FB9 /* cloud-regular-webfont.woff2 */,
+				AB890BCE76A549B9904F16DD /* cloud-semibold-webfont.ttf */,
+				9203E61147E2480583D93379 /* cloud-semibold-webfont.woff */,
+				91C6A2A31AF04392B50C2A93 /* cloud-semibold-webfont.woff2 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -931,6 +958,15 @@
 				6F545D329ECA4AF1AE371A63 /* Octicons.ttf in Resources */,
 				12040517AAD948678EC5F6D4 /* SimpleLineIcons.ttf in Resources */,
 				D02C579B2F09441E96AEE66C /* Zocial.ttf in Resources */,
+				603B191F85AA4667A6802035 /* cloud-light-webfont.ttf in Resources */,
+				96BF99C6EF9E45B08659E726 /* cloud-light-webfont.woff in Resources */,
+				486B30A9660F46C981B2EFB5 /* cloud-light-webfont.woff2 in Resources */,
+				9060D8478F0A46F4B7D19C90 /* cloud-regular-webfont.ttf in Resources */,
+				DA74380C107347AE9B197E8B /* cloud-regular-webfont.woff in Resources */,
+				7C871BE412174647B87DAB9E /* cloud-regular-webfont.woff2 in Resources */,
+				02D3FDED864B4AF0AAC2B801 /* cloud-semibold-webfont.ttf in Resources */,
+				4CE11ECE6D684531B58C4D93 /* cloud-semibold-webfont.woff in Resources */,
+				E8C6133C7A73479791C80A4E /* cloud-semibold-webfont.woff2 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
