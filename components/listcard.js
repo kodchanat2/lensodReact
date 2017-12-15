@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {  View, Image, StyleSheet, FlatList, Text } from 'react-native';
 import CollapsibleToolbar from 'react-native-collapsible-toolbar';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Actions } from 'react-native-router-flux';
 
 import NavBackButton from './navbar_back';

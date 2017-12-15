@@ -10,7 +10,8 @@ export default class Card extends Component {
     }
 
     onPress = (props) => {
-        console.log('asdasd ',props);
+        console.log('click ',props);
+        Actions.push("Artist",props);
     }
 
     render = () => (
