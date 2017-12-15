@@ -12,6 +12,7 @@
 		"react-native-collapsible-toolbar": "^0.1.1",
 		"react-native-grid-component": "^1.0.7",
 		"react-native-router-flux": "^4.0.0-beta.24",
+		"react-native-swiper": "^1.5.13",
 		"react-native-vector-icons": "^4.4.2"
 	},
 	"devDependencies": {
