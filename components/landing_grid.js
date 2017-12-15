@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Grid from 'react-native-grid-component';
+import { Actions } from 'react-native-router-flux';
 
 const imgURL = 'https://www.lensod.com/assets/img/landing/';
 const eventData = [
         { title: 'งานแต่ง', name: 'event-wedding'},
         { title: 'ปาร์ตี้', name: 'event-party'},
         { title: 'เลี้ยงสังสรรค์', name: 'event-ceremony'},
-        { title: 'ทั้งหมด', name: 'event-andmore'}
+        { title: 'ดูทั้งหมด', name: 'event-andmore', link: 'Listcard'}
     ]
 export default class EventGrid extends Component {
 
-    onPress = () => {
-        console.log('asdasd ');
+    onPress = (data) => {
+        console.log('asdasd ',data.link);
+        if(data.link) Actions.push(data.link,{title: data.title});
     }
 
     _renderItem = (data, i) => (
-        <TouchableOpacity onPress={this.onPress} style={styles.item} key={i}>
+        <TouchableOpacity onPress={() => this.onPress(data)} style={styles.item} key={i}>
             <Image 
                 style={styles.img} 
                 source={{uri: imgURL+data.name+'.jpg'}} 
